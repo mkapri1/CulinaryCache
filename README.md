@@ -1,6 +1,6 @@
 # Culinary Cache - Food Saver App
 
-**Team Members: Malika, Kondwani, Tyler, Pranav**
+## **Team Members: Malika, Kondwani, Tyler, Pranav**
 
 Our product is a food saver app designed to reduce food waste and provide affordable options to users seeking food. The app allows registered food providers, such as restaurants, grocery stores, and other food businesses, to register and list their soon-to-expire food items at a very low cost. These items are offered for sale to users of the app who are looking for cost-effective food options. 
 
