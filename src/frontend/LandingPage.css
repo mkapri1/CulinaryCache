@@ -1,0 +1,38 @@
+.App {
+    font-family: Arial, sans-serif;
+    text-align: center;
+   }
+   
+   .company-title {
+    font-size: 50px;
+    color: #fff;
+    margin-top: 200px;
+    animation: titleAnimation 2s forwards;
+   }
+   
+   @keyframes titleAnimation {
+     0% {
+       font-size: 20px;
+    }
+     100% {
+       font-size: 50px;
+    }
+   }
+   
+   .buttons{
+    display: flex;
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+    gap: 10px; /* Space between buttons */
+  }
+  
+  .login-button {
+    background-color: #fff;
+    color: black;
+    border: none;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 25px; /* Rounded corners */
+    font-size: 20px; /* Adjust the font size to your preference */
+  }
