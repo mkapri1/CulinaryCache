@@ -5,8 +5,18 @@ import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import LandingPage from './frontend/LandingPage';
 import SellerRegistration from './frontend/SellerRegistration';
 import CreateMeal from './frontend/CreateMeal';
+import UserPage from './frontend/UserPage';
+import axios from "axios";
+import { useEffect } from 'react';
+
 
 function App() {
+
+  useEffect(() => {
+    axios.get("http://localhost:3001/meals").then((response) => {
+      console.log(response)
+    })
+  }, [])
   return (
     <Router>
     <div>
@@ -14,6 +24,7 @@ function App() {
       <Route path='/' element={<LandingPage/>} />
       <Route path='/seller' element={<SellerRegistration/>} />
       <Route path='/create-meal' element={<CreateMeal/>}/>
+      <Route path='/meals' element={<UserPage/>}/>
       </Routes>
     </div>
     </Router>
