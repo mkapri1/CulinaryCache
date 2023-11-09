@@ -5,6 +5,8 @@ const CreateMeal = () => {
   const [mealName, setMealName] = useState('');
   const [isVegan, setIsVegan] = useState(false);
   const [allergies, setAllergies] = useState('');
+  const [ priceRange, setPriceRange ] = useState('');
+  const [ collectTime, setCollectTime ] = useState('');
 
   const handleMealNameChange = (e) => {
     setMealName(e.target.value);
@@ -17,6 +19,15 @@ const CreateMeal = () => {
   const handleAllergiesChange = (e) => {
     setAllergies(e.target.value);
   };
+
+  const handlePriceRange = (e) => {
+    setPriceRange(e.target.value);
+  };
+
+  const handleCollectTime = (e) => {
+    setCollectTime(e.target.value);
+  };
+  
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -57,6 +68,22 @@ const CreateMeal = () => {
               placeholder="Allergies"
               value={allergies}
               onChange={handleAllergiesChange}
+            />
+          </div>
+          <div className="input">
+            <input
+              type="integer"
+              placeholder="Price"
+              value={priceRange}
+              onChange={handlePriceRange}
+            />
+          </div>
+          <div className="input">
+            <input
+              type="integer"
+              placeholder="Collect Time"
+              value={collectTime}
+              onChange={handleCollectTime}
             />
           </div>
         </div>

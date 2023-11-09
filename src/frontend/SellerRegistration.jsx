@@ -1,8 +1,16 @@
 import React from "react";
 import './SellerRegistration.css'
 //import { Link } from 'react-router-dom';
+import { useNavigate } from "react-router-dom";
+
+
+
+
+
 
 const SellerRegistration= () => {
+
+    const navigate = useNavigate();
     return(
         <div>
         <a href="/seller">About</a>
@@ -32,7 +40,7 @@ const SellerRegistration= () => {
                 
             <div className="submit-container">
                 <div className="submit"> Register</div>
-                <div className="submit"> Login </div>
+                <button className = "submit"onClick = {() => navigate("/login")}> Login </button> <br/>
             </div>
         </div>
      </div>
