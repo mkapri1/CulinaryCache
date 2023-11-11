@@ -28,13 +28,32 @@ const db = mysql.createConnection({
     const RestaurantName = req.body.RestaurantName
     const RestaurantAddress = req.body.RestaurantAddress
     db.query(
-        "INSERT INTO Seller (Name, Email, Password, RestaurantName, RestaurantAddress) VALUES (?, ?)",
+        "INSERT INTO Seller (Name, Email, Password, RestaurantName, RestaurantAddress) VALUES (?, ?, ?, ? ,?)",
         [Name, Email, Password, RestaurantName, RestaurantAddress],
         (err, result) => {
             console.log(err)
         }
     );
 });
+
+app.post('/login', (res,req) => {
+    const SellerEmail = req.body.Email;
+    const SellerPassword = req.body.Password;
+    db.query(
+        "SELECT *FROM Seller WHERE Email = ? AND Password = ?", 
+        [SellerEmail, SellerPassword],
+        (err, result) => {
+            if(err){
+               res.send({err: err})
+            }
+            if (result.length > 0) {
+                res.send(result)
+            } else{
+                res.send({message: "Wrong Email/Password!"})
+            }
+         
+        })
+})
 
 
 app.listen(3001, () => {

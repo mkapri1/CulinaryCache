@@ -17,12 +17,13 @@ const SellerRegistration= () => {
    
 
     const register = () => {
-        Axios.post('http://localhost3001/seller', {
+        Axios.post('http://localhost:3001/seller', {
             Name : Name,
             Email:Email,
             Password: Password,
             RestaurantName : RestaurantName,
             RestaurantAddress : RestaurantAddress, 
+            
         }).then((response) => {
             console.log(response)
         })
