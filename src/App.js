@@ -15,9 +15,10 @@ function App() {
 
   //useEffect(() => {
     //axios.get("http://localhost:3001/meals").then((response) => {
-      //console.log(response)
+        //console.log(response)
     //})
   //}, [])
+
   return (
     <Router>
     <div>
