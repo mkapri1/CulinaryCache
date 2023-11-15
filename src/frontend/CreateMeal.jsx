@@ -1,94 +1,78 @@
 import React, { useState } from 'react';
 import './CreateMeal.css'; // Make sure to import your CSS file
+import Axios from 'axios'
 
 const CreateMeal = () => {
-  const [mealName, setMealName] = useState('');
-  const [isVegan, setIsVegan] = useState(false);
-  const [allergies, setAllergies] = useState('');
-  const [ priceRange, setPriceRange ] = useState('');
-  const [ collectTime, setCollectTime ] = useState('');
+  const [RestaurantName, setRestaurantName] = useState('');
+  const [Vegan, setVegan] = useState('');
+  const [Allergies, setAllergies] = useState('');
+  const [Price, setPrice ] = useState('');
+  const [ CollectTime, setCollectTime ] = useState('');
 
-  const handleMealNameChange = (e) => {
-    setMealName(e.target.value);
-  };
+  const createMeal = () => {
+    Axios.post('http://localhost:3001/create-meal', {
+        RestaurantName: RestaurantName,
+        Vegan: Vegan,
+        Allergies: Allergies,
+        Price: Price,
+        CollectTime: CollectTime,
+    })
+};
 
-  const handleVeganChange = (e) => {
-    setIsVegan(e.target.checked);
-  };
 
-  const handleAllergiesChange = (e) => {
-    setAllergies(e.target.value);
-  };
-
-  const handlePriceRange = (e) => {
-    setPriceRange(e.target.value);
-  };
-
-  const handleCollectTime = (e) => {
-    setCollectTime(e.target.value);
-  };
-  
-
-  const handleSubmit = (e) => {
-    e.preventDefault();
-
-    // Here, you can handle the form submission, such as sending data to your server.
-
-    // For demonstration purposes, we'll just log the data.
-    console.log('Meal Name:', mealName);
-    console.log('Is Vegan:', isVegan);
-    console.log('Allergies:', allergies);
-  };
 
   return (
     <div className="container">
       <div className="Title">
         <h1 className="text">Create a Mystery Meal</h1>
       </div>
-      <form onSubmit={handleSubmit}>
+      <form>
         <div className="inputs">
           <div className="input">
             <input
               type="text"
-              placeholder="Meal Name"
-              value={mealName}
-              onChange={handleMealNameChange}
+              placeholder="Restaurant Name"
+              value={RestaurantName}
+              onChange={(e)=> setRestaurantName(e.target.value)}
               required
             />
           </div>
           <div className="input">
-            <label>
-              Vegan:
-              <input type="checkbox" checked={isVegan} onChange={handleVeganChange} />
-            </label>
+            <input
+              type="text"
+              placeholder="Vegan"
+              value={Vegan}
+              onChange={(e)=> setVegan(e.target.value)}
+            />
           </div>
+          
           <div className="input">
             <input
               type="text"
               placeholder="Allergies"
-              value={allergies}
-              onChange={handleAllergiesChange}
+              value={Allergies}
+              onChange={(e)=> setAllergies(e.target.value)}
             />
           </div>
           <div className="input">
             <input
               type="integer"
               placeholder="Price"
-              value={priceRange}
-              onChange={handlePriceRange}
+              value={Price}
+              onChange={(e)=> setPrice(e.target.value)}
             />
           </div>
           <div className="input">
             <input
               type="integer"
               placeholder="Collect Time"
-              value={collectTime}
-              onChange={handleCollectTime}
+              value={CollectTime}
+              onChange={(e)=> setCollectTime(e.target.value)}
             />
           </div>
         </div>
         <div className="submit-container">
-          <button type="submit" className="submit">
+          <button type="submit" className="submit" onClick={createMeal}>
             Post Mystery Meal
           </button>
         </div>

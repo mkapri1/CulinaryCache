@@ -1,18 +1,19 @@
+import React from 'react';
+import './Contact.css';
 import { Link } from 'react-router-dom';
-// src/App.js
 
 
 // src/App.js
 
 
 
-const About = () => {
+const Contact = () => {
   return (
     <div className="about-container">
         <nav className="navbar">
         <ul>
-          <li><Link to="/homepage">Homepage</Link></li>
-          <li><Link to="/creat-meal">Create Meal</Link></li>
+          <li><Link to="/SellerHomePage">Homepage</Link></li>
+          <li><Link to="/create-meal">Create Meal</Link></li>
           <li><Link to="/about">About</Link></li>
           
         </ul>
@@ -32,4 +33,4 @@ const About = () => {
   );
 };
 
-export default About;
+export default Contact;

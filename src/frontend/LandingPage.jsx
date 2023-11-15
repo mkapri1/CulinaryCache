@@ -25,7 +25,7 @@ const navigate = useNavigate();
           <div className="landing-page">
             <div className="buttons">
             <button className = "login-button "onClick = {() => navigate("/seller")}> Seller Login </button> <br/>
-            <button className = "login-button" onClick = {() => navigate("/user")}> User Login </button>
+            <button className = "login-button" onClick = {() => navigate("/meals")}> User Login </button>
             </div>
             <div className="floating-images">
             </div>

@@ -35,6 +35,25 @@ const db = mysql.createConnection({
         }
     );
 });
+
+app.post('/create-meal', (req, res) => {
+    const RestaurantName = req.body.RestaurantName
+    const Vegan = req.body.Vegan
+    const Allergies = req.body.Allergies
+    const Price = req.body.Price
+    const CollectTime = req.body.CollectTime
+
+    db.query(
+        "INSERT INTO Meal (`Restaurant Name`, Vegan, Allergies, Price, `Collect Time`) VALUES (?, ?, ?, ? ,?)",
+        [RestaurantName, Vegan, Allergies, Price, CollectTime],
+        (err, result) => {
+            console.log(err)
+        }
+    );
+
+});
+
+
 app.use(express.json());
 
 app.post('/login', (req, res) => {

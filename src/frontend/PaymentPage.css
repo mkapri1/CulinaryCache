@@ -19,7 +19,7 @@
   }
   
   .payment-text {
-    color: #fff; /* Change text color */
+    color: #40325c; /* Change text color */
     font-size: 50px; /* Change font size */
     font-weight: 700;
     animation: titleAnimation 2s forwards;

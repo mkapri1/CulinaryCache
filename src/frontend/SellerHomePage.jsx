@@ -2,9 +2,9 @@
 // UserHomePage.js
 import React from 'react';
 import { Link } from 'react-router-dom';
-import './UserHomepage.css';
+import './SellerHomePage.css';
 
-const UserHomePage = () => {
+const SellerHomePage = () => {
   return (
     <div className="homepage">
       <nav className="navbar">
@@ -25,4 +25,4 @@ const UserHomePage = () => {
   );
 };
 
-export default UserHomePage;
+export default SellerHomePage;

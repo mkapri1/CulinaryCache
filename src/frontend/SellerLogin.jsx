@@ -2,6 +2,7 @@ import React, {useState} from "react";
 import './SellerLogin.css'
 //import { Link } from 'react-router-dom';
 import Axios from 'axios'
+import { useNavigate } from "react-router-dom";
 
 const SellerLogin= () => {
     const [SellerEmail,setSellerEmail]= useState('');
@@ -9,7 +10,7 @@ const SellerLogin= () => {
 
     
     const [loginStatus, setLoginStatus] = useState('');
-
+    const navigate = useNavigate();
     const login = () => {
         Axios.post('http://localhost:3001/login', {
             Email: SellerEmail,
@@ -20,6 +21,7 @@ const SellerLogin= () => {
             }
             else{
                 setLoginStatus(response.data[0].Email);
+                navigate("/SellerHomePage"); 
             }
         })
     }
