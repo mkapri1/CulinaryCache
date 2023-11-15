@@ -7,6 +7,7 @@ import SellerRegistration from './frontend/SellerRegistration';
 import CreateMeal from './frontend/CreateMeal';
 import UserPage from './frontend/UserPage';
 import SellerLogin from './frontend/SellerLogin';
+import PaymentPage from './frontend/PaymentPage';
 import axios from "axios";
 import { useEffect } from 'react';
 
@@ -28,6 +29,7 @@ function App() {
       <Route path = '/login' element={<SellerLogin/>} />
       <Route path='/create-meal' element={<CreateMeal/>}/>
       <Route path='/meals' element={<UserPage/>}/>
+       <Route path='/payment' element={<PaymentPage />} />
       </Routes>
     </div>
     </Router>
