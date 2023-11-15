@@ -17,6 +17,7 @@ import { createTheme, ThemeProvider } from '@mui/material/styles';
 import { Link } from 'react-router-dom';
 
 
+
 function Copyright() {
   return (
     <Typography variant="body2" color="text.secondary" align="center">
@@ -38,7 +39,7 @@ const cards = [
         description: 'Mediterranean Cuisine ',
         tags: ['Vegan'],
         price: '$5.99',
-        image: '',
+        image: '/greekgod.jpeg',
       },
       {
         id: 4,
@@ -46,7 +47,7 @@ const cards = [
         description: 'Pizza ',
         tags: [],
         price: '$3.99',
-        image: '',
+        image: '/pizza.jpeg',
       },
       {
         id: 4,
@@ -54,7 +55,7 @@ const cards = [
         description: 'Sandwhiches',
         tags: [],
         price: '$5.99',
-        image: '',
+        image: '/bakery.jpeg',
       },
       {
         id: 4,
@@ -62,7 +63,7 @@ const cards = [
         description: 'Carribean Cuisine',
         tags: ['Allergies'],
         price: '$7.99',
-        image: '',
+        image: '/caribbean.jpeg',
       },
       {
         id: 4,
@@ -70,7 +71,7 @@ const cards = [
         description: 'Salads',
         tags: ['Vegan'],
         price: '$5.99',
-        image: '',
+        image: '/salad.jpeg',
       },
       {
         id: 4,
@@ -78,7 +79,7 @@ const cards = [
         description: 'Japanese Cuisine',
         tags: [],
         price: '$7.99',
-        image: '',
+        image: '/hibachi.jpeg',
       },
     // Add more objects for additional cards
   ];
