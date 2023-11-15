@@ -12,14 +12,14 @@ const SellerLogin= () => {
 
     const login = () => {
         Axios.post('http://localhost:3001/login', {
-            SellerEmail: SellerEmail,
-            SellerPassword: SellerPassword
+            Email: SellerEmail,
+            Password: SellerPassword
         }).then((response) => {
             if(response.data.message){
                 setLoginStatus(response.data.message)
             }
             else{
-                setLoginStatus(response.data[0].SellerEmail);
+                setLoginStatus(response.data[0].Email);
             }
         })
     }
@@ -46,7 +46,6 @@ const SellerLogin= () => {
                         setSellerPassword(e.target.value);
                      }}/>
                 </div>
-                
                 
             </div>
             <div className="forgot-password">Lost Password?<span>Click Here!</span></div>

@@ -35,27 +35,27 @@ const db = mysql.createConnection({
         }
     );
 });
+app.use(express.json());
 
-app.post('/login', (res,req) => {
-    const SellerEmail = req.body.Email;
-    const SellerPassword = req.body.Password;
+app.post('/login', (req, res) => {
+    const Email = req.body.Email;
+    const Password = req.body.Password;
     db.query(
         "SELECT *FROM Seller WHERE Email = ? AND Password = ?", 
-        [SellerEmail, SellerPassword],
+        [Email, Password],
         (err, result) => {
             if(err){
                res.send({err: err})
             }
-            if (result.length > 0) {
+            if(result.length > 0) {
                 res.send(result)
             } else{
                 res.send({message: "Wrong Email/Password!"})
             }
          
-        })
+        }
+    )
 })
-
-
 app.listen(3001, () => {
     console.log("Server running on port 3001")
     db.connect(function(err){
