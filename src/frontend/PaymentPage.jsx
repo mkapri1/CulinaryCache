@@ -20,7 +20,7 @@ const PaymentPage = () => {
       newExpiryDate.length === 4 &&
       Number(newExpiryDate.slice(0, 2)) >= 1 &&
       Number(newExpiryDate.slice(0, 2)) <= 12;
-    setExpiryDate(isValidDate ? newExpiryDate : '');
+    setExpiryDate(newExpiryDate);
   };
 
   const handleCVVChange = (e) => {
@@ -41,7 +41,7 @@ const PaymentPage = () => {
     setErrorMessage('');
 
     // Display success message
-    setPaymentSuccessMessage('Payment successful!');
+    setPaymentSuccessMessage('Payment successful! Mystery Meal is Reserved.');
 
     // Continue with processing the valid data
     console.log('Card Number:', cardNumber);
