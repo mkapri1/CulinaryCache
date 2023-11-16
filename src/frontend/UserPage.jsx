@@ -113,7 +113,7 @@ export default function UserPage() {
             <Grid item key={card.id} xs={12} sm={6} md={4}>
               <Link
                 to={{
-                  pathname: `/payment/${card.id}`,
+                  pathname: `/payment`,
                   state: { cardData: card }, // Pass the card data as state
                 }}
                 style={{ textDecoration: 'none' }} // Optional: Remove the default link styles

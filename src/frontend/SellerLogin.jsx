@@ -27,12 +27,11 @@ const SellerLogin= () => {
     }
     return(
         <div>
-        <a href="/login">About</a>
         <div className="Title"> 
         </div>
         <div className="container">
             <div className=" header">
-                <div className=" text"></div> 
+                <div className=" text"> Login </div> 
             </div>
             <div className="inputs">
              <div className="input"> 

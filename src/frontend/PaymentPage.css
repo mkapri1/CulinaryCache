@@ -21,8 +21,7 @@
   .payment-text {
     color: #40325c; /* Change text color */
     font-size: 50px; /* Change font size */
-    font-weight: 700;
-    animation: titleAnimation 2s forwards;
+    font-weight: 500;
   }
   
   .payment-inputs {
