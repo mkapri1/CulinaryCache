@@ -7,5 +7,7 @@ Our product is a food saver app designed to reduce food waste and provide afford
 
 Users searching for food do not need to register; they can simply browse the app's listings to find available food items from local suppliers. This platform aims to connect surplus food with those who can benefit from it, contributing to sustainability and resourcefulness in the food industry while also providing affordable meals for consumers.
 
+React JS, Express, MySQL, NodeJs, Axios Library (TechStack)
+
 =======
 
