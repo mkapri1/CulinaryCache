@@ -29,6 +29,22 @@ const Contact = () => {
         alt="Delicious Salad"
         className="salad-image"
       />
+      <p>1. What is Culinary Cache?<br></br>
+
+Answer: Culinary Cache is a mobile app designed to combat food waste by connecting users with local restaurants, bakeries, and other food establishments.
+<br></br>
+2. How does Culinary Cache work?<br></br>
+Answer: Participating businesses list their surplus food on the app. Users can browse the available items, make a purchase, and pick up the food at a specified time from the business.<br></br>
+7. What types of food are available on Culinary Cache?<br></br>
+Answer: Culinary Cache offers a variety of food items, including meals, baked goods, and other products from local businesses.<br></br>
+Payments and Billing:<br></br>
+8. How do payments work on Culinary Cache?<br></br>
+Answer: Payments are made through the app.<br></br>
+10. How do I collect my order from Culinary Cache?<br></br>
+Answer: Visit the business at the specified pickup time pickup your food and enjoy.<br></br>
+Troubleshooting:<br></br>
+13. Can I cancel an order on Culinary Cache?<br></br>
+Answer: Orders are typically non-refundable, but you can contact customer support for assistance.</p>
     </div>
   );
 };
