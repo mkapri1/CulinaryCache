@@ -49,7 +49,7 @@ const SellerLogin= () => {
                 </div>
                 
             </div>
-            <div className="forgot-password">Lost Password?<span>Click Here!</span></div>
+            <div className="forgot-password">Problems logging in?<span>Call 1-800-555-3535</span></div>
                 
             <div className="submit-container">
                 <div className="submit" onClick={login}> Login </div>
