@@ -13,10 +13,11 @@ const PaymentPage = () => {
   };
 
   const handleExpiryDateChange = (e) => {
-    const newExpiryDate = e.target.value.replace(/[^0-9]/g, '');
-    const isValidDate = newExpiryDate.length === 4 && Number(newExpiryDate.slice(0, 2)) >= 11;
-    setExpiryDate(isValidDate ? newExpiryDate : '');
-  };
+  const newExpiryDate = e.target.value.replace(/[^0-9]/g, '');
+  const isValidDate = newExpiryDate.length === 4 && Number(newExpiryDate.slice(0, 2)) <= 12;
+  setExpiryDate(isValidDate ? newExpiryDate : '');
+};
+
 
   const handleCVVChange = (e) => {
     const newCVV = e.target.value.replace(/[^0-9]/g, '').slice(0, 4);
@@ -51,7 +52,7 @@ const PaymentPage = () => {
             <input
               type="text"
               placeholder="Expiry Date (MM/YY)"
-              value={expiryDate}
+              value={expiryDate.replace(/(\d{2})(\d{2})/, '$1/$2')}
               onChange={handleExpiryDateChange}
               required
             />
