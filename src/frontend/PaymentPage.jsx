@@ -8,15 +8,19 @@ const PaymentPage = () => {
   const [cvv, setCVV] = useState('');
 
   const handleCardNumberChange = (e) => {
-    setCardNumber(e.target.value);
+    const newCardNumber = e.target.value.replace(/[^0-9]/g, '').slice(0, 19);
+    setCardNumber(newCardNumber);
   };
 
   const handleExpiryDateChange = (e) => {
-    setExpiryDate(e.target.value);
+    const newExpiryDate = e.target.value.replace(/[^0-9]/g, '');
+    const isValidDate = newExpiryDate.length === 4 && Number(newExpiryDate.slice(0, 2)) >= 11;
+    setExpiryDate(isValidDate ? newExpiryDate : '');
   };
 
   const handleCVVChange = (e) => {
-    setCVV(e.target.value);
+    const newCVV = e.target.value.replace(/[^0-9]/g, '').slice(0, 4);
+    setCVV(newCVV);
   };
 
   const handleSubmit = (e) => {
